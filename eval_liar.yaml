@@ -1,0 +1,12 @@
+model_name:
+- "flan-t5-xxl"
+- "flan-t5-xl"
+- "flan-t5-large"
+- "flan-t5-base"
+- "flan-t5-small"
+evi_flag:
+- true
+- false
+mode:
+- 'logics'
+- 'sampling'
