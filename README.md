@@ -21,4 +21,4 @@ python drive_liar.py
 
 To reproduce the results of cross-domain experiments on three datasets:
 
-python drive_dg.py# TELLER
+python drive_dg.py
