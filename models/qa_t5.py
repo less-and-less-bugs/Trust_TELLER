@@ -38,8 +38,8 @@ need set max_length for longer text
 FT5_VARIANT = ["flan-t5-xxl", "flan-t5-xl", "flan-t5-large", "flan-t5-base", "flan-t5-small"]
 LLAMA2_VARIANT = ["Llama-2-7b-chat-hf", "Llama-2-13b-chat-hf"]
 GPT_VARIANT = ["gpt-3.5-turbo"]
-FT5_PATH = "/home/liuhui/llms/flanT5"
-Llama_PATH = "/home/liuhui/llms/l2"
+FT5_PATH = "./llms/flanT5"
+Llama_PATH = "./llms/l2"
 YES_TOKEN_ID = 19739
 NO_TOKEN_ID = 4168
 
@@ -231,9 +231,8 @@ def download_llama2(path=Llama_PATH):
         dir = os.path.join(path, mn)
         if not os.path.exists(dir):
             os.makedirs(dir)
-        snapshot_download(repo_id=model_name, local_dir=dir, ignore_patterns=["*.h5", "*.msgpack"], token="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")
-
-        # snapshot_download(repo_id=model_name, local_dir=dir, ignore_patterns=["*.h5", "*.msgpack"], token="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", allow_patterns=["pytorch_model-00002-of-00003.bin"])
+        # set your own tokens
+        snapshot_download(repo_id=model_name, local_dir=dir, ignore_patterns=["*.h5", "*.msgpack"], token="")
 
 if __name__ == "__main__":
     # download_T5()
